@@ -5,12 +5,19 @@ export function LoginComponent({setIsVisible, setUser}) {
     return (
         <div>
             <h1>Enter your name</h1>
-            <form onSubmit={(event) => {event.preventDefault();setUser(text);setIsVisible("home")}}>
+            <form onSubmit={(event) => {
+                if (!text) {
+                    return;
+                }
+                event.preventDefault();
+                setUser(text);
+                setIsVisible("home")}
+            }>
                 <input
                     placeholder="Enter your input..."
                     onChange={(event) => setText(event.target.value)}
                 />
-                <h3>{text}</h3>
+                {!text && (<h3>Field can't be empty</h3>)}
             </form>
         </div>
     )
