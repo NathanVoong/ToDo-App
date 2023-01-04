@@ -1,33 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import {LoginComponent} from "./lib/componentLogin.jsx";
+import {HomeComponent} from "./lib/componentHome.jsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+    const [isVisible, setIsVisible] = useState("login")
+    const [user, setUser] = useState("")
   return (
-    <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+          {isVisible === "login" && (
+              <LoginComponent
+                  setIsVisible={setIsVisible}
+                  setUser={setUser}
+              />
+          )}
+          {isVisible === "home" && (
+              <HomeComponent
+                  user={user}
+                  setIsVisible={setIsVisible}
+              />
+          )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
   )
 }
 
