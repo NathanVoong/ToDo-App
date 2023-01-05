@@ -1,15 +1,13 @@
-import {useState} from "react";
-
-export function AddTodoComponent({setIsVisible}) {
-    const [data, setData] = useState({})
+export function AddTodoComponent({setIsVisible, data, setData}) {
     return (
         <div>
             <h3>Enter a task name</h3>
-            <form onSubmit={async (event) => {
+            <form onSubmit={(event) => {
                 event.preventDefault();
                 const formData = new FormData(event.target);
-                await setData(formData);
-                alert(data.get('name'));
+                setData(...data, formData);
+                setIsVisible("home")
+                //alert(data.get('name'));
             }}>
                 <label>
                     Name:

@@ -2,13 +2,16 @@ import { useState } from 'react'
 import './App.css'
 import {LoginComponent} from "./lib/componentLogin.jsx";
 import {HomeComponent} from "./lib/componentHome.jsx";
-import {FeaturesComponent} from "./lib/componentFeatures.jsx";
 import {AddTodoComponent} from "./lib/componentAddTodo.jsx";
+import {DeleteTodoComponent} from "./lib/componentDeleteTodo.jsx";
+import {ViewTodoComponent} from "./lib/componentViewTodo.jsx";
 
 function App() {
     const [isVisible, setIsVisible] = useState("login")
     const [user, setUser] = useState("")
     const [taskElements, setTaskElements] = useState([])
+    const [data, setData] = useState([])
+
   return (
       <div>
           {isVisible === "login" && (
@@ -23,14 +26,27 @@ function App() {
                       user={user}
                       setIsVisible={setIsVisible}
                   />
-                  <FeaturesComponent
-                      setIsVisible={setIsVisible}
-                  />
               </div>
           )}
           {isVisible === "addTodo" && (
               <AddTodoComponent
-                  //setIsVisible={setIsVisible}
+                  setIsVisible={setIsVisible}
+                  data={data}
+                  setData={setData}
+              />
+          )}
+          {isVisible === "deleteTodo" && (
+              <DeleteTodoComponent
+                  setIsVisible={setIsVisible}
+                  data={data}
+                  setData={setData}
+              />
+          )}
+          {isVisible === "viewTodo" && (
+              <ViewTodoComponent
+                  setIsVisible={setIsVisible}
+                  data={data}
+                  setData={setData}
               />
           )}
       </div>
