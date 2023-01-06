@@ -9,8 +9,7 @@ import {ViewTodoComponent} from "./lib/componentViewTodo.jsx";
 function App() {
     const [isVisible, setIsVisible] = useState("login")
     const [user, setUser] = useState("")
-    const [taskElements, setTaskElements] = useState([])
-    const [data, setData] = useState([])
+    const [todos, setTodos] = useState([])
 
   return (
       <div>
@@ -25,28 +24,29 @@ function App() {
                   <HomeComponent
                       user={user}
                       setIsVisible={setIsVisible}
+                      todos={todos}
                   />
               </div>
           )}
           {isVisible === "addTodo" && (
               <AddTodoComponent
                   setIsVisible={setIsVisible}
-                  data={data}
-                  setData={setData}
+                  todos={todos}
+                  setTodos={setTodos}
               />
           )}
           {isVisible === "deleteTodo" && (
               <DeleteTodoComponent
                   setIsVisible={setIsVisible}
-                  data={data}
-                  setData={setData}
+                  todos={todos}
+                  setTodos={setTodos}
               />
           )}
           {isVisible === "viewTodo" && (
               <ViewTodoComponent
                   setIsVisible={setIsVisible}
-                  data={data}
-                  setData={setData}
+                  todos={todos}
+                  setTodos={setTodos}
               />
           )}
       </div>
