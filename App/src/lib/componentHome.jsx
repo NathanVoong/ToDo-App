@@ -1,18 +1,9 @@
 import React from 'react';
 
-export function HomeComponent({user, setIsVisible, todos}) {
-    console.log({todos})
+export function HomeComponent({user, setIsVisible}) {
     return (
         <div>
             <h1>Welcome {user}!</h1>
-            <form>
-                {todos.map(todo =>
-                    <div>
-                        <input type="checkbox" id={todo.id} />
-                        {todo.title} - {todo.description}
-                    </div>
-                )}
-            </form>
             <p>
                 <button onClick={() => setIsVisible("addTodo")}>
                     Add Todos

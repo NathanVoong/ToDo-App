@@ -10,6 +10,10 @@ export function AddTodoComponent({setIsVisible, todos, setTodos}) {
             <h3>Enter a task name</h3>
             <form onSubmit={(event) => {
                 event.preventDefault();
+                if (!title || !description) {
+                    setIsVisible("home")
+                    return;
+                }
                 setTodos([...todos, {id:uuid(), title,description}])
                 setIsVisible("home")
             }}>

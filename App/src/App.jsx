@@ -24,7 +24,6 @@ function App() {
                   <HomeComponent
                       user={user}
                       setIsVisible={setIsVisible}
-                      todos={todos}
                   />
               </div>
           )}
