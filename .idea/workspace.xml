@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e427a49b-577a-4e4f-97a8-30be6b9099bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/lib/componentAddTodo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/lib/componentAddTodo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/src/lib/componentHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/lib/componentHome.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672789573483</updated>
-      <workItem from="1672789574627" duration="25791000" />
+      <workItem from="1672789574627" duration="26877000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ export function HomeComponent({user, setIsVisible, todos}) {
                 {todos.map(todo =>
                     <div>
                         <input type="checkbox" id={todo.id} />
-                        {todo.title} - &{todo.description}
+                        {todo.title} - {todo.description}
                     </div>
                 )}
             </form>
